@@ -16,9 +16,7 @@ You can find a GitHub tutorial [here](https://github.com/AguaClara/aguaclara_tut
 
 1. Below this, write a sentence or two about yourself:
 
-<!--- Fill you answer here. --->
-
-Sentence about me.
+I am from Maryland and am currently excited to have gotten water from the blue water line in the lab.
 
 
 ## Headers
@@ -42,7 +40,7 @@ To signify a header, use `#`. The more `#` you use, the smaller the header gets.
 
 1. Make a header of similar size as Header 3 with whatever text you want:
 
-<!--- Fill you answer here. --->
+### re-Header 3
 
 ## Emphasis
 There are several different ways to emphasize text: *italics*, **bold**, ***combined***, and ~~strikethrough~~.
@@ -54,8 +52,10 @@ There are several different ways to emphasize text: *italics*, **bold**, ***comb
 
 1. Write 4 of your favorite words using each type of emphasis:
 
-<!--- Fill you answer here. --->
-
+*velociraptor*
+**ebullient**
+***slither***
+~~incendiary~~
 
 ## Lists
 Lists are very easy to do. For a bulleted list, use the asterisk and for a numbered list, use the number followed by a period. Hitting `Enter` after a bullet or number continues the list automatically. Hitting `Enter` followed by `Tab` gets you a sub item for a bulleted list. For example:
@@ -66,7 +66,16 @@ Lists are very easy to do. For a bulleted list, use the asterisk and for a numbe
 
 1. Now try it out for yourself. Write down a list of things you hope to achieve this semester, and elaborate on them with sub items:
 
-<!--- Fill you answer here. --->
+
+New List: Clare Version:
+
+1. Make a filter  
+  - make it in fusion
+  - make it in real life
+2. Learn fusion
+  - do some learning with Matt
+3. Have fun!
+
 
 ## Images
 To input images, you'll either need an image URL or a file path to your image. For AguaClara work, your repository should have a folder for images where you can get an image URL from. In this tutorial, I've made an image folder with a picture in the `aguaclara_tutorial` repository.
@@ -75,6 +84,8 @@ To get your image URL, go to your GitHub repository on your web browser and navi
 
 There are several ways to import an image.
 * You can import an image unformatted by using this source code `![Some_Description_of_the_Image](YOUR IMAGE URL)`
+![This is my dogs at home sitting with a skeleton](https://github.com/ceo45/personal/blob/master/SMM_skeleton.jpeg)
+
 * You can also import an image that's formatted for size using this source code `<img src="YOUR IMAGE URL" height=a width=b>`
   - You have the option to modify both the image height and width or only one if you desire
   - If you modify only one of them, the image will not distort
