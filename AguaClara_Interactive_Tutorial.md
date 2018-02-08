@@ -145,9 +145,11 @@ When making tables, it's not important that the lines match up. For example, the
 1. Create a table listing your favorite animal, food, book, and place on campus. Try out the different cell justifications:
 
 <!--- Fill you answer here. --->
-| Animal     | Book |Food     |  
-| :------------- | :------------- |
-| Item One       | Item Two       |
+| Animal | Book |Food |Place on Campus |  
+| :-------------: | :--------: |:---:|:--:|
+| Sea Lion|I am the Messenger|Choco Bananos|Design Lab|
+|Jellyfish|I seem to be a verb|carrots|504 Thurston|
+|Bear|Unbroken|dark chocolate Hershey kisses|COE|
 
 
 
@@ -166,23 +168,28 @@ For larger code blocks where you report multiple lines of code, you always start
 
 1. Below, write a Python print function with a different string using syntax highlighting:
 
-<!--- Fill you answer here. --->
+
+`print('THIS IS MY TUTORIAL')`
 
 2. Now write a block of Python code for that same print statement:
 
-<!--- Fill you answer here. --->
+
+```python
+print('THIS IS MY TUTORIAL')
+```
+
 
 
 
 ## LaTeX Equations
 You can also input LaTeX formatted equations in your Markdown file. To indicate where your equation is, you need to start and end your LaTeX equation with `$$`. To get the LaTeX preview to show it formatted, press `Cntrl + Shift + X`. For example, toggle the LaTeX preview for the line below:
 
-$$ Re_D = \frac{uD}{\nu} $$
+`$$ Re_D = \frac{uD}{\nu} $$`
 
 1. Try it on your own! Write your favorite equation using LaTeX source code and toggle the LaTeX preview to see it formatted:
 
-<!--- Fill you answer here. --->
 
+$$ C_p = sqrt(g*h) $$
 
 # Using Python and Running it With Hydrogen in Markdown
 
@@ -192,12 +199,13 @@ $$ Re_D = \frac{uD}{\nu} $$
 3. For the remaining code, highlight it with your cursor and use `Hydrogen: Run`. What is the difference between the three?
 
 ```python
+
 import numpy as np
 from aide_design.play import*
 
 xArray = u.Quantity(np.arange(0.1, 0.5, 0.01), u.m)
 
-@u.wraps(None, [u.m / u.s, u.m, u.m ** 2 / u.s], False)
+@u.wraps(None, [u.m/u.s,u.m, u.m**2/u.s], False)
 def re_flat_plate(velocity, dist, nu):
   """This function calculates the Reynolds Number for flow past a plate using fluid velocity, plate length, and kinematic viscosity."""
   return (velocity * dist / nu)
@@ -215,39 +223,56 @@ These questions are meant to test what you've learned from the Python Basics tut
 1. Write a conditional statement with 3 conditions: when x is 10, when x is 1, and when x is anything other than 1 or 10. For each condition, have your code print what the value is or isn't.
 
 <!--- Fill you answer here. --->
-
+```python
+x = 1
+if x == 10:
+  print('x is 10')
+elif x == 1:
+  print('x is 1')
+else:
+  print('x is not 1 or 10')
+```
 
 
 
 2. Write a `for` loop that takes a variable with an initial value of 0, and adds the current index to the previous value of that variable (i.e. you variable should grow in size every iteration). Perform the iteration 20 times, and have the final value be printed at the end.
 
 <!--- Fill you answer here. --->
-
-
-
-
-
-
+```python
+var = 1
+for var in range(20):
+  var = var + 1
+print(var)
+```
 
 
 
 3. Using the NumPy package, calculate the value of sin(4), and use the sigfig function from the utility module in aide_design to get your answer to 3 sig-figs. *(Hint: You will need to import these packages. Remember how to do that?)*
 
-<!--- Fill you answer here. --->
-
-
+```python
+val = np.sin(4)
+print(ut.sig(val,3))
+```
 
 4. Create a `list` of length 5, and verify the length of your list. Once you've done that, turn your `list` into an `array` and apply units of meters to it. After that, create a 5x5 `array`, extract the middle row and middle column. Verify the size of your 2D `array` and apply units of liters to it.
 
 <!--- Fill you answer here. --->
 
+```python
+list = [0,3,6,9,54]
+length = len(list)
+print(length)
+array = (np.array(list))
+array = array*u.meter
+big_array = np.array([[3,5,4,6,2],[1,2,3,4,5],[5,3,2,1,1],[0,0,0,0,0],[3,3,3,3,3]])
+column = big_array[:,2]
+row = big_array[2,:]
+bigness = np.shape(big_array)
+bigness
+big_array = big_array*u.litre
 
 
-
-
-
-
-
+```
 
 5.  One of the most famous equations for a particle diffusing through a liquid at low Reynolds Number is the Stokes-Einstein Equation where k<sub>B</sub> is the Boltzmann constant, T is the temperature in Kelvin, eta is the dynamic viscosity in kg/(m*s), and r is the particle radius. Write a function that takes a temperature in Kelvin, a particle radius in meters, and a viscosity of water to calculate the diffusion coefficient D.
 
