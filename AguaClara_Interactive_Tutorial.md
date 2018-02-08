@@ -84,9 +84,9 @@ To get your image URL, go to your GitHub repository on your web browser and navi
 
 There are several ways to import an image.
 * You can import an image unformatted by using this source code `![Some_Description_of_the_Image](YOUR IMAGE URL)`
-![This is my dogs at home sitting with a skeleton](https://github.com/ceo45/personal/blob/master/SMM_skeleton.jpeg)
 
 * You can also import an image that's formatted for size using this source code `<img src="YOUR IMAGE URL" height=a width=b>`
+
   - You have the option to modify both the image height and width or only one if you desire
   - If you modify only one of them, the image will not distort
   - If you modify both, your image may distort
@@ -102,8 +102,9 @@ Image with Height and Width Adjusted:
 
 <!--- Fill you answer here. --->
 
-
-
+Unformatted
+![This is my dogs at home sitting with a skeleton](https://raw.githubusercontent.com/ceo45/personal/master/SMM_skeleton.jpeg)
+<img src= "https://raw.githubusercontent.com/ceo45/personal/master/SMM_skeleton.jpeg" height =100 width = 100>
 
 
 ## Links
@@ -113,7 +114,7 @@ To insert a link, all you have to do is enclose your linked text in `[]` followe
 
 1. Below, write a sentence describing your major, and insert a link to your major's department website.
 
-<!--- Fill you answer here. --->
+My major is biological engineering. We learn bio and engineering. Check out the [website.](https://bee.cals.cornell.edu/)
 
 ## Tables
 Tables in Markdown are slightly harder, but there's an automatic function that allows to you make one easily. When working in a `.md` file, all you have to do is type `table` and hit enter. It will initialize a 2 by 2 table, but you can easily increase the width by going to the last column and hitting `Tab` or it's height by clicking in any cell and hitting `Enter`. Notice in the example how the text below the header is justified left, center, and right. This is due to the line below the header. A line with a colon on the far left of the dashes only indicates left justified, colons on both sides of the dashes indicates centered, and a colon on the far right of the dashes indicates right justified.
@@ -144,6 +145,9 @@ When making tables, it's not important that the lines match up. For example, the
 1. Create a table listing your favorite animal, food, book, and place on campus. Try out the different cell justifications:
 
 <!--- Fill you answer here. --->
+| Animal     | Book |Food     |  
+| :------------- | :------------- |
+| Item One       | Item Two       |
 
 
 
