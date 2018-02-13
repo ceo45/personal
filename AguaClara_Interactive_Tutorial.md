@@ -83,7 +83,18 @@ To input images, you'll either need an image URL or a file path to your image. F
 To get your image URL, go to your GitHub repository on your web browser and navigate to the file where your image is stored. Click on the image name, and it should pop up. Right click on the image, and copy image address to get it's URL.
 
 There are several ways to import an image.
-* You can import an image unformatted by using this source code `![Some_Description_of_the_Image](YOUR IMAGE URL)`
+
+Using a URL:
+![CornellSeal](https://github.com/AguaClara/aguaclara_tutorial/blob/master/Images/Cornell_University_seal.svg.png?raw=true)
+
+Using a Relative File Path:
+![CornellSeal](/Images/Cornell_University_seal.svg.png)
+
+Image with Height and Width Adjusted:
+
+<img src="https://github.com/AguaClara/aguaclara_tutorial/blob/master/Images/Cornell_University_seal.svg.png?raw=true" height=200 width=100>
+
+
 
 * You can also import an image that's formatted for size using this source code `<img src="YOUR IMAGE URL" height=a width=b>`
 
@@ -98,12 +109,18 @@ Image with Height and Width Adjusted:
 
 <img src="https://github.com/AguaClara/aguaclara_tutorial/blob/master/Images/Cornell_University_seal.svg.png?raw=true" height=200 width=100>
 
-1. Import an image of your hometown or pet from your images folder in your personal repository. Do it both unformatted, and formatted to change the size:
 
-<!--- Fill you answer here. --->
+1. Make an images folder in your personal repository, and import an image of your hometown or pet from that folder. Do it unformatted using the image URL and the relative file path method, then do it again but instead change the height and width of your image:
 
-Unformatted
+
+Unformatted with link
 ![This is my dogs at home sitting with a skeleton](https://raw.githubusercontent.com/ceo45/personal/master/SMM_skeleton.jpeg)
+
+Unformatted with relative path
+![These are my doggos hanging out with a skeleton](/SMM_skeleton.jpeg)
+
+
+Formatted with Link
 <img src= "https://raw.githubusercontent.com/ceo45/personal/master/SMM_skeleton.jpeg" height =100 width = 100>
 
 
@@ -144,9 +161,10 @@ When making tables, it's not important that the lines match up. For example, the
 
 1. Create a table listing your favorite animal, food, book, and place on campus. Try out the different cell justifications:
 
-<!--- Fill you answer here. --->
+|Making this table misaligned is the ugliest thing I've ever made|
+
 | Animal | Book |Food |Place on Campus |  
-| :-------------: | :--------: |:---:|:--:|
+| :------------- | --------: |:---:|---|
 | Sea Lion|I am the Messenger|Choco Bananos|Design Lab|
 |Jellyfish|I seem to be a verb|carrots|504 Thurston|
 |Bear|Unbroken|dark chocolate Hershey kisses|COE|
@@ -184,7 +202,10 @@ print('THIS IS MY TUTORIAL')
 ## LaTeX Equations
 You can also input LaTeX formatted equations in your Markdown file. To indicate where your equation is, you need to start and end your LaTeX equation with `$$`. To get the LaTeX preview to show it formatted, press `Cntrl + Shift + X`. For example, toggle the LaTeX preview for the line below:
 
-`$$ Re_D = \frac{uD}{\nu} $$`
+
+$$ Re_D = \frac{uD}{\nu} $$
+
+
 
 1. Try it on your own! Write your favorite equation using LaTeX source code and toggle the LaTeX preview to see it formatted:
 
@@ -237,15 +258,12 @@ else:
 
 2. Write a `for` loop that takes a variable with an initial value of 0, and adds the current index to the previous value of that variable (i.e. you variable should grow in size every iteration). Perform the iteration 20 times, and have the final value be printed at the end.
 
-<!--- Fill you answer here. --->
 ```python
 var = 1
 for var in range(20):
   var = var + 1
 print(var)
 ```
-
-
 
 3. Using the NumPy package, calculate the value of sin(4), and use the sigfig function from the utility module in aide_design to get your answer to 3 sig-figs. *(Hint: You will need to import these packages. Remember how to do that?)*
 
@@ -293,6 +311,10 @@ kB = kB_sc * u.joule / u.kelvin # I've given kB units for you in J/K; you can us
 
 6. You have a pipe with a radius of 0.2 m with water flowing in it at 2 m<sup>3</sup>/s. You want to see how the Reynolds Number changes as viscosity changes due to a change in temperature from 0 to 200<sup>o</sup>C. Create a plot of Reynolds Number against Temperature in Kelvin to show a relationship. Make sure your plot has a title and labeled axes. You can use functions from `physchem` like `pc.re_pipe` and `pc.viscosity_kinematic`. *(Hint: Make an array of temperatures to input into the `pc.viscosity_kinematic` function)*.
 
+```Python
+temp = np.linspace(0,200,201)
+temp
+```
 <!--- Fill you answer here. --->
 
 # Teletype Basics
