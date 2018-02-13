@@ -338,7 +338,7 @@ plt.grid(which = 'major')
 plt.grid(which = 'minor')
 plt.legend(loc = 'lower right', ncol = 1)
 plt.tight_layout()
-plt.savefig('/Images/Reynolds_plot.png')
+plt.savefig('.Images/Reynolds_plot.png')
 plt.show()
 ```
 <!--- Fill you answer here. --->
