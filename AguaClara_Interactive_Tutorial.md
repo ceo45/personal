@@ -305,15 +305,41 @@ from scipy.constants import Boltzmann as kB_sc # I've imported the unitless valu
 
 kB = kB_sc * u.joule / u.kelvin # I've given kB units for you in J/K; you can use the kB variable to give you Boltzmann's constant with units
 
-# Write your code here
+def stokes_einstein(temp, rad, eta):
+  """this function takes temperature, radius in meters, and viscosity to determine D"""
+  temp = temp*(u.kelvin) #puts the temp in kelvin
+  rad = rad*(u.meter) #makes the radius in meters
+  eta = eta*(u.kg/(u.m*u.s)) #viscosity in the viscosity units
+  D = (kB*temp)/(6*np.pi*eta*rad) # this does some calculating
+  return D
+
+  d = stokes_einstein(278, .00001, .0000001)
+  d
 
 ```
 
 6. You have a pipe with a radius of 0.2 m with water flowing in it at 2 m<sup>3</sup>/s. You want to see how the Reynolds Number changes as viscosity changes due to a change in temperature from 0 to 200<sup>o</sup>C. Create a plot of Reynolds Number against Temperature in Kelvin to show a relationship. Make sure your plot has a title and labeled axes. You can use functions from `physchem` like `pc.re_pipe` and `pc.viscosity_kinematic`. *(Hint: Make an array of temperatures to input into the `pc.viscosity_kinematic` function)*.
 
 ```Python
-temp = np.linspace(0,200,201)
-temp
+temp = np.linspace(0,200,201)*(u.degC)
+temp = temp.to(u.degK)
+visc = np.zeros_like(temp)
+visc = pc.viscosity_kinematic(temp)
+Q= 2*(u.m**3/u.s)
+r = .2 *u.m
+reynolds_pipe = np.zeros_like(temp)
+reynolds_pipe = pc.re_pipe(Q, r*2, visc)
+plt.plot(temp, reynolds_pipe)
+plt.xlabel('Temperature (K)')
+plt.ylabel('Reynolds Number')
+plt.title('Reynold number ')
+plt.minorticks_on()
+plt.grid(which = 'major')
+plt.grid(which = 'minor')
+plt.legend(loc = 'lower right', ncol = 1)
+plt.tight_layout()
+plt.savefig('/Images/Reynolds_plot.png')
+plt.show()
 ```
 <!--- Fill you answer here. --->
 
