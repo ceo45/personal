@@ -117,7 +117,7 @@ Unformatted with link
 ![This is my dogs at home sitting with a skeleton](https://raw.githubusercontent.com/ceo45/personal/master/SMM_skeleton.jpeg)
 
 Unformatted with relative path
-![These are my doggos hanging out with a skeleton](/SMM_skeleton.jpeg)
+![These are my doggos hanging out with a skeleton](/Images/SMM_skeleton.jpeg)
 
 
 Formatted with Link
@@ -338,7 +338,8 @@ plt.grid(which = 'major')
 plt.grid(which = 'minor')
 plt.legend(loc = 'lower right', ncol = 1)
 plt.tight_layout()
-plt.savefig('.Images/Reynolds_plot.png')
+plt.show()
+plt.savefig('.Images/Reynolds_plot.jpeg')
 plt.show()
 ```
 <!--- Fill you answer here. --->
