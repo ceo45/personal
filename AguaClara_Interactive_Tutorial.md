@@ -282,6 +282,8 @@ length = len(list)
 print(length)
 array = (np.array(list))
 array = array*u.meter
+array
+
 big_array = np.array([[3,5,4,6,2],[1,2,3,4,5],[5,3,2,1,1],[0,0,0,0,0],[3,3,3,3,3]])
 column = big_array[:,2]
 row = big_array[2,:]
@@ -339,7 +341,7 @@ plt.grid(which = 'minor')
 plt.legend(loc = 'lower right', ncol = 1)
 plt.tight_layout()
 plt.show()
-plt.savefig('.Images/Reynolds_plot.jpeg')
+plt.savefig('C:/Users/Clare O\'Connor/github/personal/Images/Reynolds_plot.png')
 plt.show()
 ```
 <!--- Fill you answer here. --->
@@ -349,10 +351,9 @@ In this section you and your team can practice using Teletype together.
 
 1. Create a portal for your team members to join. Have them write you words of  encouragement in the space below, and be sure they sign their name next to their encouragements.
 
-<!--- Fill you answer here. --->
-
-
-
+<!--- Fill you answer ! - Chere. --->
+You're gonna be a star - Chris
+You're more cinnamon bun than sourdough -Corson
 
 2. Have you other team members create a portal for you to join. In their Markdown file, write them something encouraging, and sign your name.
 
